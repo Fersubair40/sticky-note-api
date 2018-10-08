@@ -1,0 +1,2 @@
+class Sticky < ApplicationRecord
+end
