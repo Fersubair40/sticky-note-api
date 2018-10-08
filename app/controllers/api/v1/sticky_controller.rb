@@ -16,13 +16,13 @@ module Api::V1
             render json: @sticky
         end
         def destroy
-            @sticky = Sticky.find(params[:id])
-            if @sticky.destroy
-                head :no_content, status :ok
-            else
-                render json: @sticky.errors, status:uprocessable_entity
-            end
-        end 
+      @idea = Idea.find(params[:id])
+      if @idea.destroy
+        head :no_content, status: :ok
+      else
+        render json: @idea.errors, status: :unprocessable_entity
+      end
+    end
         private
 
         def sticky_params
